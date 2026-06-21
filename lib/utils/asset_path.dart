@@ -1,3 +1,3 @@
 class AssetPath{
-  String background
+  
 }
