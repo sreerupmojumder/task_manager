@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/screens/home_screen.dart';
+import 'package:task_manager/screens/reset_pin_screen.dart';
 import 'package:task_manager/screens/splash_screen.dart';
 
 void main() {
@@ -10,10 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Task Manager',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: SplashScreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeScreen());
   }
 }
