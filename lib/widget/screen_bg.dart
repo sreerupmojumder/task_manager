@@ -4,7 +4,8 @@ import 'package:task_manager/utils/assets_path.dart';
 
 class ScreenBg extends StatelessWidget {
   final Widget child;
-  const ScreenBg({super.key, required this.child});
+  final double topPadding;
+  const ScreenBg({super.key, required this.child, this.topPadding = 10});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,12 @@ class ScreenBg extends StatelessWidget {
         children: [
           SvgPicture.asset(AssetsPath.backgroundSVG, fit: BoxFit.cover),
           Padding(
-            padding: EdgeInsets.only(bottom: 35, left: 35, right: 35, top: 190),
+            padding: EdgeInsets.only(
+              bottom: 35,
+              left: 35,
+              right: 35,
+              top: topPadding,
+            ),
             child: child,
           ),
         ],

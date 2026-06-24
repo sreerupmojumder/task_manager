@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/utils/app_colors.dart';
-import 'package:task_manager/utils/assets_path.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String name;
@@ -20,7 +19,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.pColor,
       automaticallyImplyLeading: false,
       leading: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         child: CircleAvatar(
           backgroundColor: Colors.white,
           foregroundImage: AssetImage(imagePath),
@@ -36,11 +35,14 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        subtitle: Text(email, style: const TextStyle(color: Colors.white70)),
+        subtitle: Text(
+          email,
+          style: const TextStyle(color: Colors.white, fontSize: 12),
+        ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(60);
 }

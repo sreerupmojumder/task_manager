@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/utils/Customer_text.dart';
+import 'package:task_manager/utils/custom_text.dart';
 import 'package:task_manager/utils/app_colors.dart';
 import 'package:task_manager/widget/custom_textfield.dart';
 import 'package:task_manager/widget/screen_bg.dart';
@@ -14,13 +14,13 @@ class ForgetPasswordScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: .start,
           children: [
-            CustomerText(
+            CustomText(
               title: 'Your Email Address',
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
             SizedBox(height: 10),
-            CustomerText(
+            CustomText(
               title:
                   'A 6 digit verification pin will send to your email address',
               color: Colors.grey,

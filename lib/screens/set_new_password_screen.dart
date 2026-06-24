@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/utils/Customer_text.dart';
+import 'package:task_manager/utils/custom_text.dart';
 import 'package:task_manager/utils/app_colors.dart';
 import 'package:task_manager/widget/custom_button.dart';
 import 'package:task_manager/widget/custom_textfield.dart';
@@ -12,15 +12,16 @@ class SetNewPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenBg(
+        topPadding: 190,
         child: Column(
           children: [
-            CustomerText(
+            CustomText(
               title: 'Set Password',
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
             SizedBox(height: 10),
-            CustomerText(
+            CustomText(
               title:
                   'Minimum length password 8 character with Latter and number conbination',
             ),

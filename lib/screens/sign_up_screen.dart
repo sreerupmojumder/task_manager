@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/utils/Customer_text.dart';
+import 'package:task_manager/utils/custom_text.dart';
 import 'package:task_manager/utils/app_colors.dart';
 import 'package:task_manager/widget/custom_textfield.dart';
 import 'package:task_manager/widget/screen_bg.dart';
@@ -11,9 +11,10 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ScreenBg(
+        topPadding: 190,
         child: Column(
           children: [
-            CustomerText(
+            CustomText(
               title: 'Join With Us',
               fontSize: 25,
               fontWeight: FontWeight.bold,

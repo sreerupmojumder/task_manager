@@ -1,9 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:task_manager/screens/forget_password_screen.dart';
-import 'package:task_manager/screens/reset_pin_screen.dart';
-import 'package:task_manager/screens/set_new_password_screen.dart';
 import 'package:task_manager/screens/sign_up_screen.dart';
-import 'package:task_manager/utils/Customer_text.dart';
+import 'package:task_manager/utils/custom_text.dart';
 import 'package:task_manager/utils/app_colors.dart';
 import 'package:task_manager/widget/custom_textfield.dart';
 import 'package:task_manager/widget/screen_bg.dart';
@@ -29,11 +28,12 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Icon(Icons.add),
       ),
       body: ScreenBg(
+        topPadding: 190,
         child: Column(
           crossAxisAlignment: .start,
 
           children: [
-            CustomerText(
+            CustomText(
               title: 'Get Started With',
               fontSize: 25,
               fontWeight: FontWeight.bold,
@@ -107,6 +107,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: AppColors.pColor,
                             fontWeight: FontWeight.bold,
                           ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUpScreen(),
+                                ),
+                              );
+                            },
                         ),
                       ],
                     ),
