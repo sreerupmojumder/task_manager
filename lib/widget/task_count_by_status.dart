@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TaskCountByStatus extends StatelessWidget {
-  const TaskCountByStatus({super.key});
+  final String title;
+  final int count;
+  const TaskCountByStatus({super.key, required this.title, required this.count});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,9 @@ class TaskCountByStatus extends StatelessWidget {
         child: Column(
           crossAxisAlignment: .start,
           children: [
-            Text('09', style: Theme.of(context).textTheme.titleLarge),
+            Text(count.toString(), style: Theme.of(context).textTheme.titleLarge),
             SizedBox(height: 5),
-            Text('Canceled', style: Theme.of(context).textTheme.titleSmall),
+            Text(title, style: Theme.of(context).textTheme.titleSmall),
           ],
         ),
       ),

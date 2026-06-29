@@ -27,11 +27,11 @@ class SetNewPasswordScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
 
-            CustomTextfield(hintText: 'Password', obscureText: true),
+            CustomTextfield(labelText: 'Password', obscureText: true),
 
             SizedBox(height: 10),
 
-            CustomTextfield(hintText: 'Confirm Password', obscureText: true),
+            CustomTextfield(labelText: 'Confirm Password', obscureText: true),
             SizedBox(height: 15),
             CustomFilledButton(
               onTap: () {},

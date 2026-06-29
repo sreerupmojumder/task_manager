@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/screens/new_task_screen.dart';
+import 'package:task_manager/screens/progress_screen.dart';
+
 import 'package:task_manager/widget/tm_appbar.dart';
 
 class MainNavScreen extends StatefulWidget {
@@ -14,7 +16,7 @@ class _MainNavScreenState extends State<MainNavScreen> {
 
   List screens = [
     NewTaskScreen(),
-    Center(child: Text('Progress')),
+    ProgressScreen(),
     Center(child: Text('Completed')),
     Center(child: Text('Cancel')),
   ];

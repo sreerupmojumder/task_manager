@@ -27,7 +27,7 @@ class ForgetPasswordScreen extends StatelessWidget {
             ),
 
             SizedBox(height: 15),
-            CustomTextfield(hintText: 'Email'),
+            CustomTextfield(labelText: 'Email'),
             SizedBox(height: 20),
 
             Container(
